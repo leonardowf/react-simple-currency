@@ -1,7 +1,6 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+var React = require('react')
 
-export default class SimpleCurrencyInput extends React.Component {
+class SimpleCurrencyInput extends React.Component {
   constructor(props) {
     super(props)
 
@@ -12,7 +11,6 @@ export default class SimpleCurrencyInput extends React.Component {
     this.state = {
       rawValue: this.props.value
     }
-
   }
 
   componentWillMount() {
@@ -35,11 +33,6 @@ export default class SimpleCurrencyInput extends React.Component {
 
   notifyParentWithRawValue (rawValue) {
     let display = this.formattedRawValue(rawValue)
-
-    console.log('onInputType')
-    console.log('raw ' + rawValue);
-    console.log('display ' + display);
-
     this.props.onInputChange(rawValue, display)
   }
 
@@ -48,7 +41,6 @@ export default class SimpleCurrencyInput extends React.Component {
 
     result = removeOccurrences(result, this.props.delimiter)
     result = removeOccurrences(result, this.props.separator)
-    result = removeOccurrences(result, this.props.suffixUnit)
     result = removeOccurrences(result, this.props.unit)
 
     let intValue = parseInt(result)
@@ -78,7 +70,7 @@ export default class SimpleCurrencyInput extends React.Component {
         let dot = i % 3 === 0 ? this.props.delimiter : ''
         withDots = `${withDots}${char}${dot}`
       }
-      withDots = withDots.substring(0, withDots.length - 1);
+      withDots = withDots.substring(0, withDots.length - 1)
       beforeSeparator = withDots
     }
     result = beforeSeparator + this.props.separator + afterSeparator
@@ -111,7 +103,27 @@ const repeatZeroes = (times) => {
 }
 
 const removeOccurrences = (from, toRemove) => {
-  toRemove = toRemove.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")
-  var re = new RegExp(toRemove, "g")
+  toRemove = toRemove.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&')
+  var re = new RegExp(toRemove, 'g')
   return from.replace(re, '')
 }
+
+SimpleCurrencyInput.propTypes = {
+  delimiter: React.PropTypes.string,
+  onInputChange: React.PropTypes.func,
+  precision: React.PropTypes.number,
+  separator: React.PropTypes.string,
+  unit: React.PropTypes.string,
+  value: React.PropTypes.number.isRequired
+}
+
+SimpleCurrencyInput.defaultProps = {
+  value: 0,
+  precision: 2,
+  separator: '.',
+  delimiter: ',',
+  unit: '',
+  onInputChange: () => {}
+}
+
+export default SimpleCurrencyInput

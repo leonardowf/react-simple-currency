@@ -1,7 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var SimpleCurrencyInput = require('react-simple-currency');
-
+var React = require('react')
+var ReactDOM = require('react-dom')
+var SimpleCurrencyInput = require('react-simple-currency')
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -20,9 +19,6 @@ export default class App extends React.Component {
 			raw: rawValue,
 			display: displayValue
 		})
-
-		// console.log(displayValue)
-		// console.log(rawValue)
 	}
 
 	render () {
@@ -35,8 +31,6 @@ export default class App extends React.Component {
 						separator=','
 						delimiter='.'
 						unit='R$'
-						suffixUnit='R$'
-						zeroCents
 						onInputChange={this.onMoneyInputChange}
 						/>
 				</form>
@@ -48,4 +42,4 @@ export default class App extends React.Component {
 	}
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'))
