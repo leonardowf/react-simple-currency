@@ -1,7 +1,7 @@
-# SimpleCurrencyInput
+# Simple Currency Input
 
-__COMPONENT DESCRIPTION GOES HERE__
-
+React Simple Currency is a <input /> wrapper that takes a value in cents and then
+masks it as currency.
 
 ## Demo & Examples
 
@@ -30,22 +30,21 @@ npm install react-simple-currency --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
-
 ```
 var SimpleCurrencyInput = require('react-simple-currency');
 
-<SimpleCurrencyInput>Example</SimpleCurrencyInput>
+<SimpleCurrencyInput
+  value={this.state.raw}
+  precision={2}
+  separator=','
+  delimiter='.'
+  unit='R$'
+  onInputChange={this.onMoneyInputChange}
+/>
+
+// onMoneyInputChange will be called with params: rawValue and displayValue
+
 ```
-
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
-
-### Notes
-
-__ADDITIONAL USAGE NOTES__
-
 
 ## Development (`src`, `lib` and the build process)
 
@@ -55,7 +54,6 @@ To build, watch and serve the examples (which will also watch the component sour
 
 ## License
 
-__PUT LICENSE HERE__
+MIT
 
-Copyright (c) 2016 Leonardo Wistuba de França.
-
+2016 Leonardo Wistuba de França.
