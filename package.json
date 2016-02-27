@@ -1,6 +1,6 @@
 {
   "name": "react-simple-currency",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SimpleCurrencyInput",
   "main": "lib/SimpleCurrencyInput.js",
   "author": "Leonardo Wistuba de França",
