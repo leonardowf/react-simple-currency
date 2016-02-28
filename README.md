@@ -30,7 +30,7 @@ npm install react-simple-currency --save
 
 ## Usage
 
-```
+```js
 var SimpleCurrencyInput = require('react-simple-currency');
 
 <SimpleCurrencyInput
