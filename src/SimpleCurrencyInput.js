@@ -25,6 +25,10 @@ class SimpleCurrencyInput extends React.Component {
     }
   }
 
+  shouldComponentUpdate (nextProps, nextState) {
+    return nextProps.value !== this.props.value
+  }
+
   onInputType (event) {
     const input = event.target.value
     let rawValue = this.getRawValue(input)
