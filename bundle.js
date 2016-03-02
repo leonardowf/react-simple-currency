@@ -38,6 +38,15 @@ var SimpleCurrencyInput = (function (_React$Component) {
       this.notifyParentWithRawValue(this.state.rawValue);
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.value) {
+        this.setState({
+          rawValue: nextProps.value
+        });
+      }
+    }
+  }, {
     key: 'onInputType',
     value: function onInputType(event) {
       var input = event.target.value;
