@@ -47,6 +47,11 @@ var SimpleCurrencyInput = (function (_React$Component) {
       }
     }
   }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      return nextProps.value !== this.props.value;
+    }
+  }, {
     key: 'onInputType',
     value: function onInputType(event) {
       var input = event.target.value;
