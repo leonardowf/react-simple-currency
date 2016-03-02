@@ -31,6 +31,7 @@ var App = (function (_React$Component) {
 		};
 
 		this.onMoneyInputChange = this.onMoneyInputChange.bind(this);
+		this.setNewValue = this.setNewValue.bind(this);
 	}
 
 	_createClass(App, [{
@@ -39,6 +40,13 @@ var App = (function (_React$Component) {
 			this.setState({
 				raw: rawValue,
 				display: displayValue
+			});
+		}
+	}, {
+		key: 'setNewValue',
+		value: function setNewValue() {
+			this.setState({
+				raw: 666
 			});
 		}
 	}, {
@@ -70,7 +78,8 @@ var App = (function (_React$Component) {
 					null,
 					'Display: ',
 					this.state.display
-				)
+				),
+				React.createElement('button', { onClick: this.setNewValue })
 			);
 		}
 	}]);
