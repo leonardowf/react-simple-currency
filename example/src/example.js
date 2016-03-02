@@ -12,12 +12,19 @@ export default class App extends React.Component {
 		}
 
 		this.onMoneyInputChange = this.onMoneyInputChange.bind(this)
+		this.setNewValue = this.setNewValue.bind(this)
 	}
 
 	onMoneyInputChange(rawValue, displayValue) {
 		this.setState({
 			raw: rawValue,
 			display: displayValue
+		})
+	}
+
+	setNewValue() {
+		this.setState({
+			raw: 666
 		})
 	}
 
@@ -37,6 +44,8 @@ export default class App extends React.Component {
 
 				<p>Raw: {this.state.raw}</p>
 				<p>Display: {this.state.display}</p>
+
+				<button onClick={this.setNewValue}></button>
 			</div>
 		)
 	}
