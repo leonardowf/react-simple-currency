@@ -41,9 +41,11 @@ var SimpleCurrencyInput = (function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      this.setState({
-        rawValue: nextProps.value
-      });
+      if (nextProps.value || nextProps.value === 0) {
+        this.setState({
+          rawValue: nextProps.value
+        });
+      }
     }
   }, {
     key: 'onInputType',

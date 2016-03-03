@@ -18,9 +18,11 @@ class SimpleCurrencyInput extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    this.setState({
-      rawValue: nextProps.value
-    })
+    if (nextProps.value || nextProps.value === 0) {
+      this.setState({
+        rawValue: nextProps.value
+      })
+    }
   }
 
   onInputType (event) {
