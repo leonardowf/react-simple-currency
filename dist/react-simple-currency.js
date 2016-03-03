@@ -41,9 +41,6 @@ var SimpleCurrencyInput = (function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      console.log('SimpleCurrencyInput');
-      console.log(nextProps);
-
       if (nextProps.value) {
         this.setState({
           rawValue: nextProps.value
@@ -53,9 +50,6 @@ var SimpleCurrencyInput = (function (_React$Component) {
   }, {
     key: 'onInputType',
     value: function onInputType(event) {
-      console.log('SimpleCurrencyInput');
-      console.log('onInputType');
-
       var input = event.target.value;
       var rawValue = this.getRawValue(input);
       if (!rawValue) {
