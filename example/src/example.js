@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
 	setNewValue() {
 		this.setState({
-			raw: 666
+			raw: 1000
 		})
 	}
 
