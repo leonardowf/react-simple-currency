@@ -46,7 +46,7 @@ var App = (function (_React$Component) {
 		key: 'setNewValue',
 		value: function setNewValue() {
 			this.setState({
-				raw: 666
+				raw: 1000
 			});
 		}
 	}, {
