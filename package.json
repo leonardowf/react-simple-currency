@@ -1,7 +1,7 @@
 {
   "name": "react-simple-currency",
-  "version": "1.0.6",
-  "description": "SimpleCurrencyInput",
+  "version": "1.0.7",
+  "description": "A react input wrapper to mask and handle currency values",
   "main": "lib/SimpleCurrencyInput.js",
   "author": "Leonardo Wistuba de França",
   "homepage": "https://github.com/leonardowf/react-simple-currency",
@@ -42,6 +42,12 @@
   },
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "currency",
+    "money",
+    "mask",
+    "masker",
+    "input",
+    "value"
   ]
 }
