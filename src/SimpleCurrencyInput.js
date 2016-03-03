@@ -18,24 +18,14 @@ class SimpleCurrencyInput extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
+    console.log('SimpleCurrencyInput')
+    console.log(nextProps)
+
     if (nextProps.value) {
       this.setState({
         rawValue: nextProps.value
       })
     }
-  }
-
-  shouldComponentUpdate (nextProps, nextState) {
-    console.log('shouldComponentUpdate')
-    console.log('nextProps')
-    console.log(nextProps)
-
-    if (nextProps.value !== this.props.value) {
-      this.notifyParentWithRawValue(nextProps.value)
-      return true
-    }
-
-    return false
   }
 
   onInputType (event) {
