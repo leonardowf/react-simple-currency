@@ -63,7 +63,7 @@ class SimpleCurrencyInput extends React.Component {
   }
 
   formattedRawValue (rawValue) {
-    const minChars = '00'.length + this.props.precision
+    const minChars = '0'.length + this.props.precision
 
     let result = ''
     result = `${rawValue}`
