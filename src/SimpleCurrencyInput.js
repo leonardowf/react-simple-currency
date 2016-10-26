@@ -93,6 +93,7 @@ class SimpleCurrencyInput extends React.Component {
   render() {
     return (
       <input
+        className={this.props.className}
         onChange={this.onInputType}
         value={this.formattedRawValue(this.state.rawValue)}
       />
