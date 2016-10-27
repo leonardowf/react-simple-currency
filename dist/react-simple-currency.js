@@ -120,6 +120,7 @@ var SimpleCurrencyInput = (function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement('input', {
+        className: this.props.className,
         onChange: this.onInputType,
         value: this.formattedRawValue(this.state.rawValue)
       });
