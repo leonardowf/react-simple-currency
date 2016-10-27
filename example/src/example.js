@@ -33,6 +33,7 @@ export default class App extends React.Component {
 			<div>
 				<form>
 					<SimpleCurrencyInput
+						className='my-input-class'
 						value={this.state.raw}
 						precision={2}
 						separator=','

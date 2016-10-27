@@ -34,6 +34,7 @@ npm install react-simple-currency --save
 var SimpleCurrencyInput = require('react-simple-currency');
 
 <SimpleCurrencyInput
+  className='my-input-class'
   value={this.state.raw}
   precision={2}
   separator=','
