@@ -1,4 +1,4 @@
-/* 
+/*
 // Examples Stylesheet
 // -------------------
 */
@@ -51,4 +51,7 @@ label {
   margin: 15px 0;
   font-style: italic;
   color: #999;
+}
+.my-input-class {
+  background-color: #afafaf;
 }

@@ -59,6 +59,7 @@ var App = (function (_React$Component) {
 					'form',
 					null,
 					React.createElement(SimpleCurrencyInput, {
+						className: 'my-input-class',
 						value: this.state.raw,
 						precision: 2,
 						separator: ',',
