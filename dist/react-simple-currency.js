@@ -29,7 +29,9 @@ var SimpleCurrencyInput = (function (_React$Component) {
     this.getRawValue = this.getRawValue.bind(this);
 
     this.state = {
-      rawValue: this.props.value
+      rawValue: this.props.value,
+      tabIndex: this.props.tabIndex,
+      readOnly: this.props.readOnly
     };
   }
 
@@ -122,7 +124,9 @@ var SimpleCurrencyInput = (function (_React$Component) {
       return React.createElement('input', {
         className: this.props.className,
         onChange: this.onInputType,
-        value: this.formattedRawValue(this.state.rawValue)
+        value: this.formattedRawValue(this.state.rawValue),
+        tabIndex: this.state.tabIndex,
+        readOnly: this.state.readonly
       });
     }
   }]);

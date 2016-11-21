@@ -9,7 +9,9 @@ class SimpleCurrencyInput extends React.Component {
     this.getRawValue = this.getRawValue.bind(this)
 
     this.state = {
-      rawValue: this.props.value
+      rawValue: this.props.value,
+	  tabIndex: this.props.tabIndex,
+	  readOnly: this.props.readOnly
     }
   }
 
@@ -96,6 +98,8 @@ class SimpleCurrencyInput extends React.Component {
         className={this.props.className}
         onChange={this.onInputType}
         value={this.formattedRawValue(this.state.rawValue)}
+		tabIndex={this.state.tabIndex}
+		readOnly={this.state.readonly}
       />
     )
   }
