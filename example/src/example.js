@@ -45,8 +45,6 @@ export default class App extends React.Component {
 
 				<p>Raw: {this.state.raw}</p>
 				<p>Display: {this.state.display}</p>
-
-				<button onClick={this.setNewValue}></button>
 			</div>
 		)
 	}

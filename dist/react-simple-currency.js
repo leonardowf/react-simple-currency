@@ -31,7 +31,9 @@ var SimpleCurrencyInput = (function (_React$Component) {
     this.getRawValue = this.getRawValue.bind(this);
 
     this.state = {
-      rawValue: this.props.value
+      rawValue: this.props.value,
+      tabIndex: this.props.tabIndex,
+      readOnly: this.props.readOnly
     };
   }
 
@@ -123,7 +125,11 @@ var SimpleCurrencyInput = (function (_React$Component) {
     value: function render() {
       return React.createElement('input', _extends({}, this.props, {
         onChange: this.onInputType,
-        value: this.formattedRawValue(this.state.rawValue)
+        value: this.formattedRawValue(this.state.rawValue),
+        disabled: this.props.disabled,
+        autoFocus: this.props.autoFocus,
+        tabIndex: this.state.tabIndex,
+        readOnly: this.state.readOnly
       }));
     }
   }]);
@@ -148,10 +154,14 @@ var removeOccurrences = function removeOccurrences(from, toRemove) {
 };
 
 SimpleCurrencyInput.propTypes = {
+  autoFocus: React.PropTypes.bool,
   delimiter: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
   onInputChange: React.PropTypes.func,
   precision: React.PropTypes.number,
+  readOnly: React.PropTypes.bool,
   separator: React.PropTypes.string,
+  tabIndex: React.PropTypes.number,
   unit: React.PropTypes.string,
   value: React.PropTypes.number.isRequired
 };
@@ -162,6 +172,8 @@ SimpleCurrencyInput.defaultProps = {
   separator: '.',
   delimiter: ',',
   unit: '',
+  disabled: false,
+  autoFocus: false,
   onInputChange: function onInputChange() {}
 };
 

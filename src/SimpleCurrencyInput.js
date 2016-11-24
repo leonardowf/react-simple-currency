@@ -9,7 +9,9 @@ class SimpleCurrencyInput extends React.Component {
     this.getRawValue = this.getRawValue.bind(this)
 
     this.state = {
-      rawValue: this.props.value
+      rawValue: this.props.value,
+      tabIndex: this.props.tabIndex,
+      readOnly: this.props.readOnly
     }
   }
 
@@ -98,6 +100,8 @@ class SimpleCurrencyInput extends React.Component {
         value={this.formattedRawValue(this.state.rawValue)}
         disabled={this.props.disabled}
         autoFocus={this.props.autoFocus}
+        tabIndex={this.state.tabIndex}
+        readOnly={this.state.readOnly}
       />
     )
   }
@@ -120,14 +124,16 @@ const removeOccurrences = (from, toRemove) => {
 }
 
 SimpleCurrencyInput.propTypes = {
+  autoFocus: React.PropTypes.bool,
   delimiter: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
   onInputChange: React.PropTypes.func,
   precision: React.PropTypes.number,
+  readOnly: React.PropTypes.bool,
   separator: React.PropTypes.string,
+  tabIndex: React.PropTypes.number,
   unit: React.PropTypes.string,
-  value: React.PropTypes.number.isRequired,
-  disabled: React.PropTypes.bool,
-  autoFocus: React.PropTypes.bool,
+  value: React.PropTypes.number.isRequired
 }
 
 SimpleCurrencyInput.defaultProps = {
