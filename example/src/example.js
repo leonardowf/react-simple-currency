@@ -40,7 +40,7 @@ export default class App extends React.Component {
 						delimiter='.'
 						unit='R$'
 						onInputChange={this.onMoneyInputChange}
-						/>
+					/>
 				</form>
 
 				<p>Raw: {this.state.raw}</p>
