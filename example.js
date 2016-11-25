@@ -79,8 +79,7 @@ var App = (function (_React$Component) {
 					null,
 					'Display: ',
 					this.state.display
-				),
-				React.createElement('button', { onClick: this.setNewValue })
+				)
 			);
 		}
 	}]);
