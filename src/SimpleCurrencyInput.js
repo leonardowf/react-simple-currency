@@ -95,7 +95,6 @@ class SimpleCurrencyInput extends React.Component {
   render() {
     return (
       <input
-        {...this.props}
         onChange={this.onInputType}
         value={this.formattedRawValue(this.state.rawValue)}
         disabled={this.props.disabled}
