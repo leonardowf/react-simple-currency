@@ -34,6 +34,7 @@ npm install react-simple-currency --save
 var SimpleCurrencyInput = require('react-simple-currency');
 
 <SimpleCurrencyInput
+  id="my-id" //optional
   className='my-input-class'
   value={this.state.raw}
   precision={2}
@@ -41,9 +42,11 @@ var SimpleCurrencyInput = require('react-simple-currency');
   delimiter='.'
   unit='R$'
   onInputChange={this.onMoneyInputChange}
+  onInputBlur={this.onMoneyInputBlur}
 />
 
-// onMoneyInputChange will be called with params: rawValue and displayValue
+// onMoneyInputChange will be called with params: rawValue and displayValue 
+// onMoneyInputBlur will be called with param: event
 
 ```
 

@@ -97,7 +97,7 @@ class SimpleCurrencyInput extends React.Component {
       <input
 				id={this.props.id}
         className={this.props.className}
-			  onBlur={this.props.onInputBlur}
+        onBlur={this.props.onInputBlur}
         onChange={this.onInputType}
         value={this.formattedRawValue(this.state.rawValue)}
         disabled={this.props.disabled}
@@ -126,12 +126,12 @@ const removeOccurrences = (from, toRemove) => {
 }
 
 SimpleCurrencyInput.propTypes = {
-	id: React.PropTypes.string,
+  id: React.PropTypes.string,
   autoFocus: React.PropTypes.bool,
   delimiter: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   onInputChange: React.PropTypes.func,
-	onInputBlur: React.PropTypes.func,
+  onInputBlur: React.PropTypes.func,
   precision: React.PropTypes.number,
   readOnly: React.PropTypes.bool,
   separator: React.PropTypes.string,
@@ -149,7 +149,7 @@ SimpleCurrencyInput.defaultProps = {
   disabled: false,
   autoFocus: false,
   onInputChange: () => {},
-	onInputBlur: () => {}
+  onInputBlur: () => {}
 }
 
 export default SimpleCurrencyInput
