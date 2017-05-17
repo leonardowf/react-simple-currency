@@ -121,7 +121,9 @@ var SimpleCurrencyInput = (function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement('input', {
+        id: this.props.id,
         className: this.props.className,
+        onBlur: this.props.onInputBlur,
         onChange: this.onInputType,
         value: this.formattedRawValue(this.state.rawValue),
         disabled: this.props.disabled,
@@ -152,10 +154,12 @@ var removeOccurrences = function removeOccurrences(from, toRemove) {
 };
 
 SimpleCurrencyInput.propTypes = {
+  id: React.PropTypes.string,
   autoFocus: React.PropTypes.bool,
   delimiter: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   onInputChange: React.PropTypes.func,
+  onInputBlur: React.PropTypes.func,
   precision: React.PropTypes.number,
   readOnly: React.PropTypes.bool,
   separator: React.PropTypes.string,
@@ -172,7 +176,8 @@ SimpleCurrencyInput.defaultProps = {
   unit: '',
   disabled: false,
   autoFocus: false,
-  onInputChange: function onInputChange() {}
+  onInputChange: function onInputChange() {},
+  onInputBlur: function onInputBlur() {}
 };
 
 exports['default'] = SimpleCurrencyInput;
