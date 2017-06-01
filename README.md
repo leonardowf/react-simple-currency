@@ -43,10 +43,12 @@ var SimpleCurrencyInput = require('react-simple-currency');
   unit='R$'
   onInputChange={this.onMoneyInputChange}
   onInputBlur={this.onMoneyInputBlur}
+  onInputFocus={this.onInputFocus}
 />
 
-// onMoneyInputChange will be called with params: rawValue and displayValue 
+// onMoneyInputChange will be called with params: rawValue and displayValue
 // onMoneyInputBlur will be called with param: event
+// onInputFocus will be called with param: event
 
 ```
 
