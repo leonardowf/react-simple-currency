@@ -15,6 +15,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var React = (typeof window !== "undefined" ? window['React'] : typeof global !== "undefined" ? global['React'] : null);
+var PropTypes = require('prop-types');
 
 var SimpleCurrencyInput = (function (_React$Component) {
   _inherits(SimpleCurrencyInput, _React$Component);
@@ -156,19 +157,19 @@ var removeOccurrences = function removeOccurrences(from, toRemove) {
 };
 
 SimpleCurrencyInput.propTypes = {
-  id: React.PropTypes.string,
-  autoFocus: React.PropTypes.bool,
-  delimiter: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  onInputChange: React.PropTypes.func,
-  onInputBlur: React.PropTypes.func,
-  onInputFocus: React.PropTypes.func,
-  precision: React.PropTypes.number,
-  readOnly: React.PropTypes.bool,
-  separator: React.PropTypes.string,
-  tabIndex: React.PropTypes.number,
-  unit: React.PropTypes.string,
-  value: React.PropTypes.number.isRequired
+  id: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  delimiter: PropTypes.string,
+  disabled: PropTypes.bool,
+  onInputChange: PropTypes.func,
+  onInputBlur: PropTypes.func,
+  onInputFocus: PropTypes.func,
+  precision: PropTypes.number,
+  readOnly: PropTypes.bool,
+  separator: PropTypes.string,
+  tabIndex: PropTypes.number,
+  unit: PropTypes.string,
+  value: PropTypes.number.isRequired
 };
 
 SimpleCurrencyInput.defaultProps = {
@@ -188,5 +189,5 @@ exports['default'] = SimpleCurrencyInput;
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[1])(1)
+},{"prop-types":undefined}]},{},[1])(1)
 });

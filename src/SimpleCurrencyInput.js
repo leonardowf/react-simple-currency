@@ -1,4 +1,5 @@
 var React = require('react')
+var PropTypes = require('prop-types')
 
 class SimpleCurrencyInput extends React.Component {
   constructor(props) {
@@ -127,19 +128,19 @@ const removeOccurrences = (from, toRemove) => {
 }
 
 SimpleCurrencyInput.propTypes = {
-  id: React.PropTypes.string,
-  autoFocus: React.PropTypes.bool,
-  delimiter: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  onInputChange: React.PropTypes.func,
-  onInputBlur: React.PropTypes.func,
-  onInputFocus: React.PropTypes.func,
-  precision: React.PropTypes.number,
-  readOnly: React.PropTypes.bool,
-  separator: React.PropTypes.string,
-  tabIndex: React.PropTypes.number,
-  unit: React.PropTypes.string,
-  value: React.PropTypes.number.isRequired
+  id: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  delimiter: PropTypes.string,
+  disabled: PropTypes.bool,
+  onInputChange: PropTypes.func,
+  onInputBlur: PropTypes.func,
+  onInputFocus: PropTypes.func,
+  precision: PropTypes.number,
+  readOnly: PropTypes.bool,
+  separator: PropTypes.string,
+  tabIndex: PropTypes.number,
+  unit: PropTypes.string,
+  value: PropTypes.number.isRequired
 }
 
 SimpleCurrencyInput.defaultProps = {
