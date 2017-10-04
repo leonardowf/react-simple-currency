@@ -97,6 +97,7 @@ class SimpleCurrencyInput extends React.Component {
       <input
 				id={this.props.id}
         className={this.props.className}
+		placeholder={this.props.placeholder}		
         onBlur={this.props.onInputBlur}
         onFocus={this.props.onInputFocus}
         onChange={this.onInputType}
@@ -139,7 +140,8 @@ SimpleCurrencyInput.propTypes = {
   separator: React.PropTypes.string,
   tabIndex: React.PropTypes.number,
   unit: React.PropTypes.string,
-  value: React.PropTypes.number.isRequired
+  value: React.PropTypes.number.isRequired,
+  placeholder: React.PropTypes.string	
 }
 
 SimpleCurrencyInput.defaultProps = {
@@ -148,6 +150,7 @@ SimpleCurrencyInput.defaultProps = {
   separator: '.',
   delimiter: ',',
   unit: '',
+  placeholder: '0.00',	
   disabled: false,
   autoFocus: false,
   onInputChange: () => {},
