@@ -59,7 +59,7 @@ class SimpleCurrencyInput extends React.Component {
   }
 
   formattedRawValue (rawValue) {
-  	if (!rawValue) {
+  	if (rawValue === undefined || rawValue === null) {
   		return
 	}
 	
