@@ -144,7 +144,7 @@ SimpleCurrencyInput.propTypes = {
   separator: React.PropTypes.string,
   tabIndex: React.PropTypes.number,
   unit: React.PropTypes.string,
-  value: React.PropTypes.number.isRequired,
+  value: React.PropTypes.number,
   placeholder: React.PropTypes.string	
 }
 
