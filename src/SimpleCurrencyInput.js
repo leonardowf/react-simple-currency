@@ -96,7 +96,7 @@ class SimpleCurrencyInput extends React.Component {
   render() {
     return (
       <input
-				id={this.props.id}
+	id={this.props.id}
         className={this.props.className}
         onBlur={this.props.onInputBlur}
         onFocus={this.props.onInputFocus}
@@ -106,6 +106,9 @@ class SimpleCurrencyInput extends React.Component {
         autoFocus={this.props.autoFocus}
         tabIndex={this.state.tabIndex}
         readOnly={this.state.readOnly}
+        placeholder={this.props.placeholder}
+        name={this.props.name}
+        maxlength={this.props.maxlength}
       />
     )
   }
@@ -132,6 +135,9 @@ SimpleCurrencyInput.propTypes = {
   autoFocus: PropTypes.bool,
   delimiter: PropTypes.string,
   disabled: PropTypes.bool,
+  maxlength: PropTypes.number,
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
   onInputChange: PropTypes.func,
   onInputBlur: PropTypes.func,
   onInputFocus: PropTypes.func,
@@ -153,7 +159,10 @@ SimpleCurrencyInput.defaultProps = {
   autoFocus: false,
   onInputChange: () => {},
   onInputBlur: () => {},
-  onInputFocus: () => {}
+  onInputFocus: () => {},
+  maxlength: '',
+  name: '',
+  placeholder: ''
 }
 
 export default SimpleCurrencyInput
