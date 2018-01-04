@@ -105,6 +105,7 @@ class SimpleCurrencyInput extends React.Component {
         disabled={this.props.disabled}
         autoFocus={this.props.autoFocus}
         tabIndex={this.state.tabIndex}
+        readOnly={this.state.readOnly}
         placeholder={this.props.placeholder}
         name={this.props.name}
         maxlength={this.props.maxlength}
