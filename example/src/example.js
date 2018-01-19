@@ -40,6 +40,10 @@ export default class App extends React.Component {
 						delimiter='.'
 						unit='R$'
 						onInputChange={this.onMoneyInputChange}
+            name="amount"
+            autoCorrect="off"
+            autoComplete="off"
+            placeholder="Amount"
 					/>
 				</form>
 
